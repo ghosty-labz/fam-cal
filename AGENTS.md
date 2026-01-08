@@ -12,6 +12,7 @@
 - `pnpm preview`: serve the production build locally for smoke checks.
 - `pnpm test`: run the Vitest test suite once.
 - `pnpm run deploy`: build and deploy via Wrangler (requires Cloudflare credentials).
+ - Use `pnpm` for package management and scripts.
 
 ## Coding Style & Naming Conventions
 - TypeScript + React with module syntax; prefer `.tsx` for components and `.ts` for utilities.
