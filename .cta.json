@@ -1,0 +1,17 @@
+{
+  "projectName": "fam-cal",
+  "mode": "file-router",
+  "typescript": true,
+  "tailwind": true,
+  "packageManager": "pnpm",
+  "addOnOptions": {},
+  "git": true,
+  "version": 1,
+  "framework": "react-cra",
+  "chosenAddOns": [
+    "cloudflare",
+    "start",
+    "shadcn",
+    "tanstack-query"
+  ]
+}
