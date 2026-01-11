@@ -1,15 +1,77 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
+
+:root {
+  --ink: #1f1b16;
+  --sand: #f3eadb;
+  --cloud: #fff7eb;
+  --sun: #f4b266;
+  --mint: #4ec9b0;
+  --sky: #5aa5ff;
+  --rose: #f17a6c;
+  --font-sans: "Plus Jakarta Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Fraunces", "Georgia", serif;
+}
 
 body {
   @apply m-0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--sand);
+  color: var(--ink);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-serif);
+  }
+
+  .fade-up {
+    opacity: 0;
+    transform: translateY(18px);
+    animation: fade-up 0.8s ease forwards;
+  }
+
+  .fade-up-delay-1 {
+    animation-delay: 0.15s;
+  }
+
+  .fade-up-delay-2 {
+    animation-delay: 0.3s;
+  }
+
+  .fade-up-delay-3 {
+    animation-delay: 0.45s;
+  }
+
+  .float-slow {
+    animation: float-slow 6s ease-in-out infinite;
+  }
+
+  .float-slower {
+    animation: float-slow 9s ease-in-out infinite;
+  }
+}
+
+@keyframes fade-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
 }
